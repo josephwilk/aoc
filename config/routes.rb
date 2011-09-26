@@ -4,6 +4,7 @@ ArtOfCucumber::Application.routes.draw do
 
   match '/' => 'checkin#index'
   match '/checkin/:airline' => 'checkin#checkin'
+  match '/details/:data' => 'checkin#details'
 
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'

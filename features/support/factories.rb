@@ -1,7 +1,8 @@
 FactoryGirl.define do
 
   factory :booking do
-    flight="1"
+    flight "1"
+    airline "ba"
   end
 
   factory :passenger do

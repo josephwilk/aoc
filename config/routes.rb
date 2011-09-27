@@ -3,8 +3,9 @@ ArtOfCucumber::Application.routes.draw do
   # first created -> highest priority.
 
   match '/' => 'checkin#index'
-  match '/checkin/:airline' => 'checkin#checkin'
-  match '/details/:data' => 'checkin#details'
+  match '/checkin/:airline' => 'checkin#airline'
+  match '/finish' => 'checkin#finish'
+  match '/seat' => 'checkin#seat'
 
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'

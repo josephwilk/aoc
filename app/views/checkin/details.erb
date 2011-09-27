@@ -1,4 +1,10 @@
-Seat:
+
 <form action="/seat" method="POST">
-<input type="text">
+<h2>ETicket Number <input type="text"/ name="eticket"> </h2>
+
+<h2>Passport Number <input type="text"/ name="passport"> </h2>
+<input type="hidden" value="<%= @airline %>" name="airline">
+
+<input type="submit" value="next">
+
 </form>

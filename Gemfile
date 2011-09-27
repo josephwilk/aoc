@@ -23,6 +23,8 @@ group :test do
   # database_cleaner is not required, but highly recommended
   gem 'database_cleaner'
   gem 'factory_girl'
+  gem 'launchy'
+  gem 'ruby-debug19', :require => 'ruby-debug'
 end
 
 
@@ -34,7 +36,7 @@ end
 # gem 'capistrano'
 
 # To use debugger
-# gem 'ruby-debug19', :require => 'ruby-debug'
+
 
 group :test do
   # Pretty printed test output

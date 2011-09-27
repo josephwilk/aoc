@@ -1,8 +1,10 @@
 FactoryGirl.define do
 
   factory :booking do
+    association :passenger, :factory => :passenger
+    passport '123'
+    eticket  '123'
     flight "1"
-    airline "ba"
   end
 
   factory :passenger do

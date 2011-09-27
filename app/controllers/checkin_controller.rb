@@ -15,9 +15,9 @@ class CheckinController < ApplicationController
       return
     end
     
-    if params[:eticket]
+    if params[:eticket] && !params[:eticket].empty?
       booking = Booking.find_by_eticket(params[:eticket])
-    elsif params[:passport]
+    elsif params[:passport] && !params[:passport].empty?
       booking = Booking.find_by_passport(params[:passport])
     end
     

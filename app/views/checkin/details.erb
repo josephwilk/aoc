@@ -1,10 +1,6 @@
-
-<form action="/seat" method="POST">
-<h2>ETicket Number <input type="text"/ name="eticket"> </h2>
-
-<h2>Passport Number <input type="text"/ name="passport"> </h2>
-<input type="hidden" value="<%= @airline %>" name="airline">
-
-<input type="submit" value="next">
-
+<form action="/seat" method="POST" id="details">
+  <label name="eticket">eticket</label><input type="text"/ name="eticket" id="eticket"><br/>
+  <label name="passport">passport</label><input type="text"/ name="passport" id="passport">
+  <input type="hidden" value="<%= @airline %>" name="airline">
+  <input type="submit" id="submit" name="submit">
 </form>

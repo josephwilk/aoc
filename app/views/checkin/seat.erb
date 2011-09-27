@@ -7,10 +7,10 @@
 
 Seat:
 <form action="/finish" method="POST">
-<input type="text" name="seat">
-<input type="hidden" name="airline" value="<%= @airline %>" >
-<input type="hidden" name="passenger" value="<%= @passenger %>">
-<input type="submit">
+  <label name="seat">seat</label><input type="text" name="seat" id="seat">
+  <input type="hidden" name="airline" value="<%= @airline %>" >
+  <input type="hidden" name="passenger" value="<%= @passenger %>">
+  <input type="submit" id="submit" name="submit">
 </form>
 
 <% end %>

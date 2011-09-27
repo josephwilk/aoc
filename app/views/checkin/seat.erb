@@ -1,3 +1,10 @@
+
+<h2>Hello <%= @passenger.first_name %> <%= @passenger.last_name %></h2>
+
+<% if @passenger.risky? %>
+ There was a problem with your booking. Please go to a checkin desk.
+<% else %>
+
 Seat:
 <form action="/finish" method="POST">
 <input type="text" name="seat">
@@ -5,3 +12,5 @@ Seat:
 <input type="hidden" name="passenger" value="<%= @passenger %>">
 <input type="submit">
 </form>
+
+<% end %>

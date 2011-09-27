@@ -14,7 +14,7 @@
 ActiveRecord::Schema.define(:version => 20110927091527) do
 
   create_table "bookings", :force => true do |t|
-    t.text     "passenger"
+    t.integer  "passenger_id"
     t.text     "passport"
     t.text     "eticket"
     t.text     "flight"

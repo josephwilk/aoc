@@ -10,7 +10,7 @@ class CheckinController < ApplicationController
 
   def seat
     unless params[:eticket] || params[:passport]
-      @errors = "Please enter a eticket or passport number"
+      @errors = "Please enter a eticket or passport number!"
       render :details
       return
     end
@@ -22,7 +22,7 @@ class CheckinController < ApplicationController
     end
     
     unless booking
-      @errors = "Sorry we could not find that user"
+      @errors = "Sorry we could not find that user!"
       render :index
       return
     end
@@ -33,7 +33,7 @@ class CheckinController < ApplicationController
 
   def finish
     unless params[:seat]
-      @errors = "Please enter a seat"
+      @errors = "Please enter a seat!"
       render :seat
       return
     end

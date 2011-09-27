@@ -8,12 +8,13 @@ Feature: Low Risk Customer Checkin
       | flight | eticket | passport | 
       | 1      | 123     | 123      |
 
+  @wip
   Scenario: Successfull checkin with ETicket number
-    When I enter "BA"
-    And I enter my ""
-    And I enter my Passport number
-    And I pick my seat
-    Then I should have a boarding pass printed
+    When I press "BA"
+    And I enter my Passport number "123"
+    And I pick my seat "24"
+    Then I should see "Checkin successful"
+    And I should have a boarding pass printed
 
   Scenario: Failed checkin with Passport number
     When I enter "BA"

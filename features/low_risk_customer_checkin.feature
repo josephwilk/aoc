@@ -14,7 +14,7 @@ Feature: Low Risk Customer Checkin
   @wip
   Scenario: Successfull checkin with ETicket number
 	Given I am on the homepage
-    When I follow "British Airways"
+    When I select "British Airways"
     And I enter my Passport number "123"
     And I pick my seat "24"
     Then I should see "Checkin successful"
@@ -22,14 +22,14 @@ Feature: Low Risk Customer Checkin
 
   Scenario: Failed checkin with Passport number
 	Given I am on the homepage
-    When I enter "BA"
+    When I select "British Airways"
     And I enter my passport number incorrectly
     Then I should see "Please confirm your passport number"
     And I should not have boarding passess printed
 
   Scenario: Locked checkin with bad passport numbers
 	Given I am on the homepage
-    When I enter "BA"
+    When I select "British Airways"
     And I enter my passport number incorrectly 3 times
     Then I should see
     """

@@ -9,6 +9,12 @@ class CheckinController < ApplicationController
   end
 
   def seat
+    unless params[:eticket] || params[:passport]
+      @errors = "Please enter a eticket or passport number"
+      render :details
+      return
+    end
+    
     if params[:eticket]
       booking = Booking.find_by_eticket(params[:eticket])
     elsif params[:passport]
@@ -26,7 +32,11 @@ class CheckinController < ApplicationController
   end
 
   def finish
-    puts params.inspect
+    unless params[:seat]
+      @errors = "Please enter a seat"
+      render :seat
+      return
+    end
     checkin = Checkin.create!(:airline => params[:airline],
                               :seat    => params[:seat],
                               :flight  => params[:flight],

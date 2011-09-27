@@ -18,6 +18,14 @@ end
 
 gem 'jquery-rails'
 
+group :test do
+  gem 'cucumber-rails'
+  # database_cleaner is not required, but highly recommended
+  gem 'database_cleaner'
+end
+
+
+
 # Use unicorn as the web server
 # gem 'unicorn'
 

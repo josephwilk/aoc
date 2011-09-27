@@ -4,9 +4,9 @@ Feature: Low Risk Customer Checkin
   to checkin via automated system
 
   Background:
-    Given I have the following security risk:
-      | name | security risk | 
-      | Joe  | low           | 
+    Given I made the following bookings:
+      | flight | eticket | passport | 
+      | 1      | 123     | 123      |
 
   Scenario: Successfull checkin with ETicket number
     When I enter "BA"
